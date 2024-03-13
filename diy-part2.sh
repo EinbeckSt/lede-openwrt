@@ -17,12 +17,12 @@
 rm -rf feeds/packages/lang/golang
 git clone https://github.com/sbwml/packages_lang_golang -b 22.x feeds/packages/lang/golang
 sed -i 's/stripped/release/g' feeds/packages/multimedia/aliyundrive-webdav/Makefile
-git clone -b luci-smartdns-dev https://github.com/xiaorouji/openwrt-passwall.git package/passwall
+# sed -i 's/CGO_ENABLED=0/CGO_ENABLED=1/g' feeds/packages/net/mosdns/Makefile
 # echo '### Updates Theme Argon ###'
 # package/lean/luci-theme-argon /package/feeds/luci/luci-theme-argon
 # rm -rf package/feeds/luci/luci-theme-argon
 # git clone https://github.com/xiaozhuai/luci-app-filebrowser package/luci-app-filebrowser
-# git clone -b luci-smartdns-dev https://github.com/xiaorouji/openwrt-passwall.git package/passwall
+git clone -b luci-smartdns-dev https://github.com/xiaorouji/openwrt-passwall package/passwall
 # git clone https://github.com/sbwml/luci-app-mosdns -b v5 package/mosdns
 # git clone https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
 # git clone --depth=1 https://github.com/fw876/helloworld.git package/helloworld
